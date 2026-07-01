@@ -1,0 +1,7 @@
+# Local secrets for `wrangler pages dev` — never commit
+.dev.vars
+.env
+
+# Wrangler / Cloudflare local state
+.wrangler/
+node_modules/

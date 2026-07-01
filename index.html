@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Northpeak Academy Checkout</title>
+  <meta name="description" content="Secure one-time checkout for lifetime course access, built on Stripe Checkout.">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="test-banner" role="status">
+    Stripe test mode — no real charge. Pay with card <strong>4242&nbsp;4242&nbsp;4242&nbsp;4242</strong>, any future expiry, any CVC, any postal code.
+  </div>
+
+  <main class="checkout">
+    <section class="product" aria-labelledby="product-title">
+      <p class="brand">Northpeak Academy</p>
+      <h1 id="product-title">Pro Course: Lifetime Access</h1>
+      <p class="product-desc">One-time payment. Full course library, all future updates, and a certificate on completion.</p>
+      <ul class="includes">
+        <li>42 lessons across 6 modules</li>
+        <li>Downloadable source and exercises</li>
+        <li>Lifetime access, no subscription</li>
+      </ul>
+    </section>
+
+    <section class="pay-panel" aria-labelledby="pay-title">
+      <h2 id="pay-title" class="visually-hidden">Payment</h2>
+      <div class="price-row">
+        <span class="price-label">Total</span>
+        <span class="price-amount">$49.00</span>
+      </div>
+
+      <label class="terms-gate">
+        <input type="checkbox" id="agree-terms">
+        <span>I agree to the <a href="/terms.html" target="_blank" rel="noopener">Terms &amp; Conditions and Disclaimers</a>.</span>
+      </label>
+
+      <button type="button" id="pay-button" class="pay-button" disabled>Pay $49.00</button>
+      <p id="pay-error" class="pay-error" role="alert"></p>
+
+      <p class="secured">Secured by Stripe. Card details never touch this server.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Stripe Checkout integration demo · <a href="https://helban.dev" rel="noopener">helban.dev</a></p>
+  </footer>
+
+  <script src="/js/checkout.js"></script>
+</body>
+</html>
